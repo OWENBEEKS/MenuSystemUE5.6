@@ -10,6 +10,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+
 #include "OnlineSubsystem.h"
 #include "OnlineSessionSettings.h"
 #include <Online/OnlineSessionNames.h>
@@ -201,7 +202,7 @@ void AMenuSystemCharacter::JoinGameSession()
 	SessionSearch->MaxSearchResults = 1000; // Using a shared dev app ID, so we can find many sessions, so this is set high
 	SessionSearch->bIsLanQuery = false; // Set to true for LAN games, false for online games
 
-	SessionSearch->QuerySettings.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals); // Search for sessions with presence
+	SessionSearch->QuerySettings.Set(SEARCH_LOBBIES, true, EOnlineComparisonOp::Equals); // Search for sessions with presence
 	//If you are having an issue with getting SEARCH_PRESENCE to work it is now depreciated and is replaced with SEARCH_LOBBIES. 
 	// //Also you need to use #include "Online/OnlineSessionNames.h
 
