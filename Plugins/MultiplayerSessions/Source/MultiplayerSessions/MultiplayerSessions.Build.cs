@@ -26,9 +26,10 @@ public class MultiplayerSessions : ModuleRules
 			new string[]
 			{
 				"Core",
-				"OnlineSubsystem", // For online functionality
+                "OnlineSubsystem", // For online functionality
 				"OnlineSubsystemSteam", // For Steam integration
-				
+				"SocketSubsystemSteamIP",
+                "SteamSockets", // For Steam sockets
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
