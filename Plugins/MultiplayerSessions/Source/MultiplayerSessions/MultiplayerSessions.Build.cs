@@ -27,9 +27,12 @@ public class MultiplayerSessions : ModuleRules
 			{
 				"Core",
                 "OnlineSubsystem", // For online functionality
-				"OnlineSubsystemSteam", // For Steam integration
-				"SocketSubsystemSteamIP",
-                "SteamSockets", // For Steam sockets
+				"OnlineSubsystemSteam", // For Steam integration (DEPRECATED: Use OnlineSubsystemSteamIP instead)
+				"SocketSubsystemSteamIP", // For Steam IP sockets
+                "SteamSockets", 
+				"UMG", 
+				"Slate", 
+				"SlateCore", 
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
